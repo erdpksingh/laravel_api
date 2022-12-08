@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1;
+namespace App\Http\Controllers;
 
 use App\Models\Customer;
 use App\Http\Requests\StoreCustomerRequest;
@@ -15,7 +15,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        return Customer::all();
     }
 
     /**
