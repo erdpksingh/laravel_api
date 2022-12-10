@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Customer;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
+use App\Http\Controllers\Controller;
 
 class CustomerController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +17,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
+       
         return Customer::all();
     }
 
@@ -47,7 +50,7 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-        //
+        return  $customer;
     }
 
     /**
